@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division of Data Science and Cyber Security</title>
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --secondary-gold: #e6a612;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .division-title h1 {
+            color: var(--primary-blue);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        
+        .division-title p {
+            color: var(--primary-blue);
+            margin: 0.2rem 0 0;
+            font-size: 0.9rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-gold);
+        }
+        
+        .main-content {
+            padding: 2rem 0;
+        }
+        
+        .section-title {
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--secondary-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .library-section {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+
+        .facility-showcase {
+        margin: 3rem 0;
+    }
+
+           .image-section {
+        margin: 2rem 0;
+        text-align: center;
+    }
+    
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border: 1px solid #e0e0e0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .image-section img:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .image-caption {
+        margin-top: 0.8rem;
+        font-style: italic;
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    .responsive-image-section {
+        margin: 3rem 0;
+    }
+    
+    .responsive-image-container {
+        width: 100%;
+        max-width: 1000px; /* Adjust as needed */
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .responsive-image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .responsive-image-container:hover img {
+        transform: scale(1.02);
+    }
+    
+    .image-caption {
+        text-align: center;
+        margin-top: 1rem;
+        font-style: italic;
+        color: #555;
+    }
+    
+        .footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--secondary-gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--secondary-gold);
+        }
+        
+        .contact-info {
+            font-size: 0.9rem;
+        }
+        
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 0.5rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <img src="logo.png" alt="Karunya Institute of Technology and Sciences" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="https://www.karunya.edu/ds">Home</a></li>
+                    <li><a href="https://www.karunya.edu/ds/overview">Overview</a></li>
+                    <li><a href="https://www.karunya.edu/ds/academics">Academics</a></li>
+                    <li><a href="https://www.karunya.edu/ds/faculty">Faculty</a></li>
+                    <li><a href="https://www.karunya.edu/ds/facilities">Facilities</a></li>
+                    <li><a href="https://www.karunya.edu/ds/research">Research</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    </div>
+        <div class="container">
+            <div class="header-content">
+                <div class="division-title">
+                    <h1>Division of Data Science and Cyber Security</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container">
+    <section>
+        <h2 class="section-title">Division Library</h2>
+        <div class="library-section">
+            <p>The Division Library provides the cognitive and intellectual pursuit of the division towards academic and research activities. The library is well equipped with latest collection of books, magazines and reference materials covering all subjects in the area of computer science. The library has around 1957 volumes of text books, reference books and complementary sample books.</p>
+            <p>Books on Artificial Intelligence, Deep Learning, Data Analytics, Advanced computing, Database Management, Programming and Industry campus connect books from Industries such as Infosys, Novell, SUSE, Oracle etc are available for lending and as references. The library has a well-equipped reading facility. Every year the latest books and most recent editions are procured as per the requests and requirement of the faculty and students.</p>
+        </div>
+    </section>
+    
+    <section class="facility-showcase">
+        <div class="image-container">
+            <img src="https://www.karunya.edu/sites/default/files/img/dscs/industrial_lab.png.pagespeed.ce.iE7i46Nfuf.png" alt="Industrial Laboratory">
+        </div>
+    </section>
+</main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Karunya Institutions</h3>
+                    <ul>
+                        <li><a href="#">Karunya Christian School</a></li>
+                        <li><a href="#">Evangeline Matriculation Higher Secondary School</a></li>
+                        <li><a href="#">Karunya Hospitals</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Mandatory Disclosures</h3>
+                    <ul>
+                        <li><a href="#">Public Self-Disclosure</a></li>
+                        <li><a href="#">Statutory Committees</a></li>
+                        <li><a href="#">MHRD/UGC/AICTE Compliance</a></li>
+                        <li><a href="#">AICTE Approval Orders</a></li>
+                        <li><a href="#">AICTE Essential</a></li>
+                        <li><a href="#">Annual Report</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Centre for Extension Activities</a></li>
+                        <li><a href="#">Physical Education</a></li>
+                        <li><a href="#">IQAC</a></li>
+                        <li><a href="#">IPR Cell</a></li>
+                        <li><a href="#">Grievance Redressal Cell</a></li>
+                        <li><a href="#">International Affairs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <p><strong>Toll Free:</strong> 1800 889 9888</p>
+                        <p><strong>Toll Free:</strong> 1800 425 4300</p>
+                        <p><strong>Email:</strong> info@karunya.edu</p>
+                        <p>
+                            Karunya Institute of Technology and Sciences,<br>
+                            (Deemed to be University),<br>
+                            Karunya Nagar,<br>
+                            Coimbatore - 641 114,<br>
+                            Tamil Nadu, India
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>©2020 -2025. Karunya Institute of Technology and Sciences. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

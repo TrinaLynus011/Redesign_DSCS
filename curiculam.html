@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum - Division of Data Science and Cyber Security</title>
+    <style>
+        /* Base styles with beige and blue theme */
+        :root {
+            --primary-beige: #F5F5DC;
+            --dark-beige: #D2B48C;
+            --darker-beige: #B38B6D;
+            --accent-blue: #4682B4;
+            --dark-blue: #1E3F66;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --section-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-text);
+            background-color: white;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        
+        /* Header with white background */
+        header {
+            background: white;
+            color: var(--dark-blue);
+            padding: 1.5rem 0;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-bottom: 1px solid var(--primary-beige);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-brand img {
+            height: 80px;
+            width: auto;
+        }
+        
+        .brand-text h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: var(--dark-blue);
+            line-height: 1.2;
+        }
+        
+        .brand-text p {
+            font-size: 1.1rem;
+            margin-top: 8px;
+            color: var(--darker-beige);
+        }
+        
+        /* Navigation links below header */
+        .department-nav {
+            background-color: var(--dark-blue);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        /* Container and sections */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        section {
+            margin: 50px 0;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--section-shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--primary-beige);
+        }
+        
+        section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(to right, var(--dark-blue), var(--dark-beige));
+        }
+        
+        h2 {
+            color: var(--dark-blue);
+            border-bottom: 3px solid var(--dark-beige);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+        }
+        
+        h3 {
+            color: var(--dark-blue);
+            margin: 20px 0 15px;
+            font-size: 1.6rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        strong {
+            color: var(--dark-blue);
+        }
+        
+        /* Image styling */
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-container p {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--darker-beige);
+        }
+        
+        /* Footer */
+         :root {
+            --primary-blue: #003366;
+            --secondary-gold: #e6a612;
+            --dark-bg: #343a40;
+            --light-text: #ffffff;
+            --light-gray: #cccccc;
+            --border-color: #444444;
+            --highlight-beige: #d2b48c;
+        }
+        
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 3rem 0 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .footer-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--secondary-gold);
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-gold);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.7rem;
+            line-height: 1.5;
+        }
+        
+        .footer-section ul li a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--secondary-gold);
+            transform: translateX(5px);
+        }
+        
+        .contact-info {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .contact-info p {
+            margin: 0.8rem 0;
+        }
+        
+        .contact-info strong {
+            color: var(--secondary-gold);
+            font-weight: 500;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: var(--light-text);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-gold);
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            margin-top: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--highlight-beige);
+            font-weight: 500;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-gold);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--light-gray);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.3rem;
+            }
+        }
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .brand-text h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .logo-brand {
+                flex-direction: column;
+            }
+            
+            .logo-brand img {
+                margin-bottom: 15px;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .nav-links a {
+                font-size: 0.95rem;
+                padding: 6px 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            section {
+                padding: 30px;
+                margin: 40px 0;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .brand-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .brand-text p {
+                font-size: 0.95rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.85rem;
+                padding: 4px 8px;
+            }
+            
+            section {
+                padding: 25px 20px;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Grand Branding -->
+    <header>
+        <div class="header-content">
+            <div class="logo-brand">
+                <img src="logo.png" alt="Karunya University Logo">
+                <div class="brand-text">
+                    <h1>Division of Data Science and Cyber Security</h1>
+                    <p>Excellence in Technology Education</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Department Navigation Links -->
+    <div class="department-nav">
+        <div class="nav-links">
+            <a href="overview.html">Overview</a>
+            <a href="academics.html">Academics</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="research.html">Research</a>
+            <a href="curriculum.html">Curriculum</a>
+            <a href="placements.html">Placements</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section>
+            <p>The curriculum is designed based on Program Educational Objectives (PEOs), Program Outcomes (POs) and also adopting the guidelines of All India Council for Technical Education (AICTE). The curriculum and syllabi are discussed in Curriculum Development Cell (CDC) meetings along with student representatives. The recommendations of CDC are presented in the BoS comprising experts from premier institutes, industries and alumni for scrutiny. The recommendations of BoS are placed in Academic Council (AC) / Board of Management (BoM) for approval. Approved curriculum and syllabi are implemented and documented as Academic Hand Books.</p>
+
+            <p>Continuous reviews are obtained from the stakeholders, industry, academia, external experts from other institutions and faculty. The feedback is analyzed and the required updates are incorporated if necessary. Continuous review process provides a detailed insight on the process of designing/ updating a Course.</p>
+        </section>
+
+        <section>
+            <div class="image-container">
+                <img src="https://www.karunya.edu/sites/default/files/img/cst/curriculum/curriculum,P20design,P20process.png.pagespeed.ce.K_lx1LTNes.png" alt="Curriculum Design Process">
+                <p>Curriculum Design Process</p>
+            </div>
+
+            <div class="image-container">
+                <img src="https://www.karunya.edu/sites/default/files/img/cst/curriculum/review,P20process.png.pagespeed.ce.SX91zrhSrh.png" alt="Review Process">
+                <p>Review Process</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Level of Program Curriculum</h2>
+            <p>The divisions ensures adherence to the guidelines received from statutory regulatory bodies like UGC, AICTE on credit distribution for PG curriculum, while developing and/or restructuring it from time to time. The Courses offered in the curriculum are on par with the top national and international Institutions. A 360O feedback approach is practiced and input from stakeholders such as industry experts, employers, academia, parents, students, and alumni is obtained to identify and offer Courses on emerging technologies addressing the societal requirements. Involvement of industrial experts in BoS, feedback from alumni, formal and informal discussions with stakeholders ensure bridging any gap between the curriculum and requirement of industries, and recruiters. Courses are also offered in collaboration with the industries such as IBM, ORACLE, Infosys, SUSE, CISCO and EMURGO.</p>
+
+            <h3>Overall Quality:</h3>
+            <p>Courses on current technologies are identified from eminent National and international institutions and included in the curriculum as core and softcore Courses (Professional electives). More than 100 professional elective Courses have been identified on trending technologies. These Courses inspire the students to carry out research projects and publish their work in reputed conferences and refereed journals.</p>
+        </section>
+
+        <section>
+            <h2>I. Programs and Credits</h2>
+            <div class="image-container">
+                <img src="https://karunya.edu/sites/default/files/img/dscs/curriculum/ProgramsandCredits.jpg" alt="Programs and Credits">
+                <p>Courses & Credit Distribution (B.Tech. Programs) - 2021 -2022 Batch onwards</p>
+                <img src="https://karunya.edu/sites/default/files/img/dscs/curriculum/CoursesandCreditDistribution.jpg" alt="Courses and Credit Distribution">
+            </div>
+        </section>
+
+        <section>
+            <h2>II. Constitution of Curriculum Cells</h2>
+            <p>The Divisional Curriculum Development Cells are constituted as under for planning and updating of syllabus to be presented to the Board of Studies.</p>
+
+            <h3>a) Divisional Curriculum Development Cell</h3>
+            <p>Curriculum Development Cell is a standing internal committee with all the internal members of the BoS and AC and any other faculty co-opted / nominated by the Dean of School / HoD.</p>
+            
+            <p><strong>Chairman</strong>: Head of the Divisions</p>
+            <p><strong>Secretary</strong>: Faculty nominated by HoD</p>
+
+            <h3>b) Board of Studies</h3>
+            <p><strong>Chairman</strong>: Head of the Divisions</p>
+            <p><strong>Internal Members</strong>: All Professors, All Associate Professors, Assistant Professors nominated by the HoD</p>
+            <p><strong>External Members</strong>: One member each one from Academia, Industry and Alumni from the constituted Board.</p>
+            <p><strong>Secretary</strong>: Faculty member nominated by the HoD.</p>
+        </section>
+    </div>
+
+   <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Karunya Institutions</h3>
+                    <ul>
+                        <li><a href="#">Karunya Christian School</a></li>
+                        <li><a href="#">Evangeline Matriculation Higher Secondary School</a></li>
+                        <li><a href="#">Karunya Hospitals</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Mandatory Disclosures</h3>
+                    <ul>
+                        <li><a href="#">Public Self-Disclosure</a></li>
+                        <li><a href="#">Statutory Committees</a></li>
+                        <li><a href="#">MHRD/UGC/AICTE Compliance</a></li>
+                        <li><a href="#">AICTE Approval Orders</a></li>
+                        <li><a href="#">AICTE Essential</a></li>
+                        <li><a href="#">Annual Report</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                        <li><a href="#">University Policies</a></li>
+                        <li><a href="#">NAAC SSR & DVV Report</a></li>
+                        <li><a href="#">NIRF</a></li>
+                        <li><a href="#">ARIIA</a></li>
+                        <li><a href="#">Digilocker NAD</a></li>
+                        <li><a href="#">RTI</a></li>
+                        <li><a href="#">MoA</a></li>
+                        <li><a href="#">EoC</a></li>
+                        <li><a href="#">MoU</a></li>
+                        <li><a href="#">FDA</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Centre for Extension Activities</a></li>
+                        <li><a href="#">Physical Education</a></li>
+                        <li><a href="#">IQAC</a></li>
+                        <li><a href="#">IPR Cell</a></li>
+                        <li><a href="#">Grievance Redressal Cell</a></li>
+                        <li><a href="#">International Affairs</a></li>
+                        <li><a href="#">ICC</a></li>
+                        <li><a href="#">Anti-Ragging</a></li>
+                        <li><a href="#">Accessibility Software</a></li>
+                        <li><a href="#">Karunya Competency Development Centre</a></li>
+                        <li><a href="#">Karunya Technology Business Incubation Park</a></li>
+                        <li><a href="#">Karunya Innovation And Design Studio</a></li>
+                        <li><a href="#">Student Organizations</a></li>
+                        <li><a href="#">IEEE</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <p><strong>Toll Free:</strong> 1800 889 9888</p>
+                        <p><strong>Toll Free:</strong> 1800 425 4300</p>
+                        <p><strong>Email:</strong> info@karunya.edu</p>
+                        <p>
+                            <strong>Address:</strong><br>
+                            Karunya Institute of Technology and Sciences,<br>
+                            (Deemed to be University),<br>
+                            Karunya Nagar,<br>
+                            Coimbatore - 641 114,<br>
+                            Tamil Nadu, India
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Virtual Tour</a><br>
+                        <a href="#">Admissions Open 2025 Online MBA</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>©2020 -2025. Karunya Institute of Technology and Sciences. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
